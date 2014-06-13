@@ -3,7 +3,21 @@
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+.rating{
+  margin: auto 0;
+}
 
+.rating_star{
+  background: url('/images/star.gif') 0 0;
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: left;
+}
+
+.on {
+  background-position: 0 16px; 
+}
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 body { padding-top: 70px; }
 footer { margin-top: 70px; }
