@@ -41,4 +41,12 @@ ActiveRecord::Schema.define(version: 20140612120556) do
     t.datetime "updated_at"
   end
 
+  # create_table "ratings", force: true do |t|
+  #   t.string   "user_id"
+  #   t.string   "photo_id"
+  #   t.integer  "value"
+  #   t.datetime "created_at"
+  #   t.datetime "updated_at"
+  # end
+
 end
