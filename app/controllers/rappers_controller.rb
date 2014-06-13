@@ -75,3 +75,4 @@ class RappersController < ApplicationController
       params.require(:rapper).permit(:song, :artist, :album, :description, :picture)
     end
 end
+
