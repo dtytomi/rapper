@@ -7,8 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -18,20 +16,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">MusicLab</a>
+      <a style="color:#f06"  class="navbar-brand" href="/">RapHub</a>
       <%= link_to "Rappers", rappers_path, class: "navbar-brand" %>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         
       </ul>
+
+<p class="navbar-text pull-right">
+<% if member_signed_in? %> |
+  Logged in as <strong><%= member_session_path %></strong> |
+  <%= link_to 'Edit profile', edit_member_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_member_session_path, method: :delete, :class => 'navbar-link'  %> 
+<% else %>
+  <%= link_to "Sign up", new_member_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_member_session_path, :class => 'navbar-link'  %>
+<% end %>
+
+
     </div>
   </div>
 </nav>
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
- 
 <div class="welcome-bg">
 <div class="container">
   <%= yield %>
