@@ -1,4 +1,4 @@
-<h1>Listing rappers</h1>
+<h1>Rappers Chart</h1>
 
 <table>
   <thead>
@@ -15,14 +15,14 @@
   <tbody>
     <% @rappers.each do |rapper| %>
       <tr>
-        <td><%= rapper.song %></td>
-        <td><%= rapper.artist %></td>
-        <td><%= rapper.album %></td>
-        <td><%= rapper.description %></td>
-        <td><%= rapper.picture %></td>
-        <td><%= link_to 'Show', rapper %></td>
-        <td><%= link_to 'Edit', edit_rapper_path(rapper) %></td>
-        <td><%= link_to 'Destroy', rapper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td width="100"><%= rapper.song %></td>
+        <td width="100"><%= rapper.artist %></td>
+        <td width="100"><%= rapper.album %></td>
+        <td width="100"><%= rapper.description %></td>
+        <td width="100"><%= rapper.picture %></td>
+        <td width="100"><%= link_to 'Show', rapper %></td>
+        <td width="100"><%= link_to 'Edit', edit_rapper_path(rapper) %></td>
+        <!-- <td width="100"><%= link_to 'Destroy', rapper, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
