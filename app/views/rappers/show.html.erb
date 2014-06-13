@@ -24,5 +24,10 @@
   <%= image_tag(@rapper.picture_url, :width => 600) if @rapper.picture.present? %>
 </p>
 
+<p>
+  <strong>Rate:</strong>
+  <%= @rapper.rate %>
+</p>
+
 <%= link_to 'Edit', edit_rapper_path(@rapper) %> |
 <%= link_to 'Back', rappers_path %>

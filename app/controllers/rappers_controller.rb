@@ -72,7 +72,7 @@ class RappersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rapper_params
-      params.require(:rapper).permit(:song, :artist, :album, :description, :picture)
+      params.require(:rapper).permit(:song, :artist, :album, :description, :picture, :rate )
     end
 end
 
